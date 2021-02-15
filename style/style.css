@@ -6,193 +6,121 @@
           box-sizing: border-box;
 }
 
-html, body {
+html {
   height: 100%;
   background: #674baf;
 }
 
-header {
+body {
   min-height: 100vh;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 50px 0;
+  padding: 0 2vw;
   background-image: url(/images/bg-desktop.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.logo {
-  width: 200px;
-  height: 40px;
-  background-image: url(/images/logo.svg);
   background-size: 100% 100%;
 }
 
-.slide {
-  height: 100vh;
+.header-logo {
+  margin: 3rem 0;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main .img-container {
+  width: 55%;
+}
+
+.main .img-container img {
   width: 100%;
+  height: auto;
+}
+
+.main .content {
+  width: 40%;
+  color: white;
+}
+
+.main .content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+}
+
+.main .content p {
+  margin: 1rem 0;
+  font-family: "Open sans", sans-serif;
+}
+
+.main .content .btn-content {
+  cursor: pointer;
+  padding: 1rem 3rem;
+  margin: 1rem 0;
+  outline: none;
+  border: none;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.479);
+          box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.479);
+  font-size: 1rem;
+  color: #674baf;
+  background: white;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.main .content .btn-content:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0.2rem 1rem 0.6rem rgba(0, 0, 0, 0.479);
+          box-shadow: 0.2rem 1rem 0.6rem rgba(0, 0, 0, 0.479);
+}
+
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  right: 7vw;
+  bottom: 3vw;
+}
+
+.social-media .box {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.mockups {
-  height: 493px;
-  width: 696px;
-  margin-right: 20px;
-  background-image: url(/images/illustration-mockups.svg);
-  background-size: 100% 100%;
-}
-
-.banner {
-  width: 520px;
-  height: 400px;
-}
-
-.banner h1 {
-  font-weight: var(bold);
-  font-size: 2.2rem;
-  font-family: "Poppins", sans-serif;
-  color: white;
-}
-
-.banner p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  font-family: "Open sans", sans-serif;
-  color: white;
-}
-
-.banner .btn {
-  cursor: pointer;
-  width: 200px;
-  height: 56px;
-  margin-top: 2rem;
-  -webkit-box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.445);
-          box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.445);
-  border: none;
-  outline: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0.2rem;
+  height: 3rem;
+  width: 3rem;
+  border: 2px solid white;
   border-radius: 2rem;
+  -webkit-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+
+.social-media .box a {
   font-size: 1.2rem;
-  font-weight: var(bold);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  color: #674baf;
-  background-color: white;
-}
-
-.banner .btn:hover {
   color: white;
-  background-color: #e882e8;
 }
 
-footer {
-  position: relative;
-  bottom: 0;
-  padding: 10px 0;
-  background-color: white;
-}
-
-@media screen and (max-width: 1120px) {
-  .slide {
-    height: 100vh;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .mockups {
-    height: 400px;
-    width: 500px;
-    margin: 0;
-    background-image: url(/images/illustration-mockups.svg);
-    background-size: 100% 100%;
-  }
-  .banner {
-    width: 450px;
-    height: 272px;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  header {
-    background-image: url(/images/bg-mobile.svg);
-  }
-  .slide {
-    height: 100vh;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-  .mockups {
-    height: 209px;
-    width: 296px;
-    margin-right: 20px;
-    background-image: url(/images/illustration-mockups.svg);
-    background-size: 100% 100%;
-  }
-  .banner {
-    width: 304px;
-    height: 272px;
-    text-align: center;
-  }
-  .banner h1 {
-    font-weight: var(bold);
-    font-size: 1.5rem;
-    font-family: "Poppins", sans-serif;
-    color: white;
-  }
-  .banner p {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    font-family: "Open sans", sans-serif;
-    color: white;
-  }
-  .banner .btn {
-    cursor: pointer;
-    width: 200px;
-    height: 46px;
-    margin-top: 2rem;
-    -webkit-box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.445);
-            box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.445);
-    border: none;
-    outline: none;
-    border-radius: 2rem;
-    font-size: 1.2rem;
-    font-weight: var(bold);
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    color: #674baf;
-    background-color: white;
-  }
+.social-media .box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
