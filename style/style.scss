@@ -10,19 +10,16 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-    background: hsl(257, 40%, 49%);
-}
-
 body {
     min-height: 100vh;
-    padding: 0 2vw;
+    padding: 0 10vw;
+    background-color: hsl(257, 40%, 49%);
     background-image: url(/images/bg-desktop.svg);
     background-size: 100% 100%;
 }
 
 .header-logo {
+    height: 3rem;
     margin: 3rem 0;
 }
 
@@ -45,7 +42,6 @@ body {
         color: white;
 
         h1 {
-
             font-family: $primary-font;
             font-size: 2.5rem;
         }
@@ -77,12 +73,14 @@ body {
     }
 }
 
-.social-media {
+footer {
+    padding: 1rem 0;
     display: flex;
-    justify-content: space-evenly;   
-    position: absolute;
-    right: 7vw;
-    bottom: 3vw;
+    justify-content: flex-end;
+
+    .social-media {
+        display: flex;
+    }
 
     .box {
         cursor: pointer;
@@ -104,6 +102,67 @@ body {
 
     .box:hover{
         transform: scale(1.1);
+    }
+}
+
+@media screen and (max-width: 1000px){
+    body {
+        background-image: url(/images/bg-mobile.svg);
+    }
+
+    .header-logo {
+        height: 2rem;
+    }
+
+    .main{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    
+        .img-container {
+            width: 100%;
+    
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        .content {
+            width: 100%;
+            text-align: center;
+            color: white;
+
+            h1 {
+                font-family: $primary-font;
+                font-size: 2rem;
+            }
+    
+            p {
+                font-size: 0.9rem;
+                margin: 1rem 0;
+                font-family: $secundary-font;
+            }
+    
+            .btn-content {
+                cursor: pointer;
+                padding: 0.8rem 3rem;
+                margin: 1rem 0;
+                outline: none;
+                border: none;
+                border-radius: 2rem;
+                box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.479);
+                font-size: 1rem;
+                color: $primary-color;
+                background: white;
+                transition: 0.3s ease-out;
+            }
+        }
+    }
+
+    footer {
+        justify-content: center;
+        align-items: center;
     }
 
 }

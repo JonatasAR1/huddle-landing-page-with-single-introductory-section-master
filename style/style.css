@@ -6,19 +6,16 @@
           box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-  background: #674baf;
-}
-
 body {
   min-height: 100vh;
-  padding: 0 2vw;
+  padding: 0 10vw;
+  background-color: #674baf;
   background-image: url(/images/bg-desktop.svg);
   background-size: 100% 100%;
 }
 
 .header-logo {
+  height: 3rem;
   margin: 3rem 0;
 }
 
@@ -82,19 +79,23 @@ body {
           box-shadow: 0.2rem 1rem 0.6rem rgba(0, 0, 0, 0.479);
 }
 
-.social-media {
+footer {
+  padding: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  position: absolute;
-  right: 7vw;
-  bottom: 3vw;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.social-media .box {
+footer .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .box {
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -114,13 +115,78 @@ body {
   transition: 0.1s ease-out;
 }
 
-.social-media .box a {
+footer .box a {
   font-size: 1.2rem;
   color: white;
 }
 
-.social-media .box:hover {
+footer .box:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: url(/images/bg-mobile.svg);
+  }
+  .header-logo {
+    height: 2rem;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .img-container {
+    width: 100%;
+  }
+  .main .img-container img {
+    width: 100%;
+    height: auto;
+  }
+  .main .content {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .main .content h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+  }
+  .main .content p {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+    font-family: "Open sans", sans-serif;
+  }
+  .main .content .btn-content {
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+    margin: 1rem 0;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.479);
+            box-shadow: 0.2rem 0.3rem 0.3rem rgba(0, 0, 0, 0.479);
+    font-size: 1rem;
+    color: #674baf;
+    background: white;
+    -webkit-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+  }
+  footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */
